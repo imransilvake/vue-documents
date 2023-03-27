@@ -1,5 +1,7 @@
 
 
+## [0.1.1](https://github.com/imransilvake/vue-documents/compare/0.1.0...0.1.1) (2023-03-27)
+
 # 0.1.0 (2023-03-27)
 
 
