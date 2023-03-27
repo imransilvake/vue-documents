@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue';
+import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import { configDefaults } from 'vitest/config';
 
@@ -16,6 +17,16 @@ const configuration = defineConfig(({ mode }) => {
 		test: {
 			globals: true,
 			exclude: [...configDefaults.exclude]
+		},
+		resolve: { alias: { '@': path.resolve(__dirname, './src/app') } },
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: `
+						@import "./src/assets/scss/mixins.scss";
+						`
+				}
+			}
 		}
 	};
 });

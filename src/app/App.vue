@@ -1,15 +1,41 @@
 <script setup lang="ts">
-import HelloWorld from '../components/HelloWorld.vue';
+import VFooter from './frame/VFooter.vue';
+import VHeader from './frame/VHeader.vue';
+import VSidebar from './frame/VSidebar.vue';
 </script>
 
 <template>
-	<div>
-		<a href="https://vitejs.dev" target="_blank">
-			<img src="/vite.svg" class="logo" alt="Vite logo" />
-		</a>
-		<a href="https://vuejs.org/" target="_blank">
-			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-		</a>
+	<div class="app-documents">
+		<VHeader />
+		<div class="app-content">
+			<div>
+				<VSidebar />
+			</div>
+			<div class="app-screens">
+				<router-view />
+				<VFooter />
+			</div>
+		</div>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
+
+<style lang="scss" scoped>
+.app-documents {
+	.app-content {
+		display: flex;
+		.app-screens {
+			margin: 0 pxToRem(50);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	@media screen and (max-width: 730px) {
+		.app-content {
+			.app-screens {
+				margin: 0 pxToRem(20);
+			}
+		}
+	}
+}
+</style>

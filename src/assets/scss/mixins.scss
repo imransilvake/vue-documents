@@ -1,0 +1,5 @@
+// converter: px to rem
+@function pxToRem($value) {
+	$remValue: ($value * 0.0625) + rem;
+	@return $remValue;
+}

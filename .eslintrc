@@ -1,19 +1,15 @@
 {
 	"root": true, // let eslint picks up the config at the root of the directory
-	"parser": "@typescript-eslint/parser",
+	"parser": "vue-eslint-parser",
 	"plugins": ["prettier", "@typescript-eslint", "simple-import-sort"],
 	"parserOptions": {
+		"parser": "@typescript-eslint/parser",
 		"ecmaVersion": "latest",
-		"sourceType": "module", // allows using import/export statements
-		"ecmaFeatures": { "jsx": true } // enable JSX since we are using React
-	},
-	"settings": {
-		"react": { "version": "detect" }
+		"sourceType": "module" // allows using import/export statements
 	},
 	"env": {
 		"browser": true, // enables browser globals like window and document
-		"node": true, // enables Node.js global variables and Node.js scoping.
-		"jest": true // enables unit-testing
+		"node": true // enables Node.js global variables and Node.js scoping.
 	},
 	"extends": [
 		"eslint:recommended",
@@ -26,7 +22,6 @@
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/no-var-requires": "off",
-		"react/prop-types": "off",
 		"simple-import-sort/imports": "error",
 		"simple-import-sort/exports": "error"
 	}
