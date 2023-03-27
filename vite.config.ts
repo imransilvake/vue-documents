@@ -16,6 +16,7 @@ const configuration = defineConfig(({ mode }) => {
 		build: { sourcemap: false },
 		test: {
 			globals: true,
+			environment: 'jsdom',
 			exclude: [...configDefaults.exclude]
 		},
 		resolve: { alias: { '@': path.resolve(__dirname, './src/app') } },

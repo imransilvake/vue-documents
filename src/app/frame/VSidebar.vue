@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { defineEmits } from 'vue';
 import { RouteRecordRaw, useRouter } from 'vue-router';
 
 import appRoutes from '../routes/Routes';
